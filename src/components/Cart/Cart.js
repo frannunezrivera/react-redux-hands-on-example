@@ -1,5 +1,6 @@
 import React from 'react'
 import Item from '../Item/Item'
+import {currencyFormat} from '../../utils/formatters';
 
 const Cart = ({items, total}) => {
     const hasItems = items.length > 0;
@@ -20,7 +21,7 @@ const Cart = ({items, total}) => {
         <div className="shopping-cart">
             <h3>Your Cart</h3>
             <div>{nodes}</div>
-            <p>Total: {total}</p>
+            <p>Total: {currencyFormat(total)}</p>
         </div>
     )
 };

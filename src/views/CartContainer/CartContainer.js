@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {getTotal, getCartItems} from '../../reducers'
 import Cart from '../../components/Cart/Cart'
 
 const CartContainer = ({items, total}) => (
@@ -10,8 +11,8 @@ const CartContainer = ({items, total}) => (
 )
 
 const mapStateToProps = (state) => ({
-    items: [],
-    total: 0
+    items: getCartItems(state),
+    total: getTotal(state)
 })
 
 export default connect(
