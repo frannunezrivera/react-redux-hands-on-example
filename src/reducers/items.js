@@ -1,8 +1,13 @@
 import { combineReducers } from 'redux'
-import {GET_ALL_ITEMS} from '../actions'
+import {GET_ALL_ITEMS,ADD_TO_CART} from '../actions'
 
 const items = (state, action) => {
     switch(action.type) {
+        case ADD_TO_CART:
+            return {
+                ...state,
+                inventory: state.inventory - 1
+            }
         default:
             return state
     }
