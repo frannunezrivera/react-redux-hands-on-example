@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import ItemsContainer from '../ItemsContainer/ItemsContainer';
+import CartContainer from '../CartContainer/CartContainer';
 
 class App extends Component {
     render() {
@@ -14,6 +15,7 @@ class App extends Component {
                 </div>
                 <div className="App-intro">
                     <ItemsContainer/>
+                    <CartContainer/>
                 </div>
             </div>
         );
