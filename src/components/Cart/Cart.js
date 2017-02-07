@@ -1,19 +1,9 @@
 import React from 'react'
-import Item from '../Item/Item'
 import {currencyFormat} from '../../utils/formatters';
 
-const Cart = ({items, total}) => {
-    const hasItems = items.length > 0;
-    const nodes = hasItems ? (
-            items.map(item =>
-                <Item
-                    name={item.name}
-                    price={item.price}
-                    quantity={item.quantity}
-                    key={item.id}
-                />
-            )
-        ) : (
+const Cart = ({total, children}) => {
+    const hasItems = children.length > 0;
+    const nodes = hasItems ? children : (
             <em>Please add some products to cart.</em>
         );
 

@@ -7,6 +7,7 @@ import shop from '../api/shop';
 
 export const GET_ALL_ITEMS = 'GET_ALL_ITEMS';
 export const ADD_TO_CART = 'ADD_TO_CART';
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 
 /*
  * action creators
@@ -28,6 +29,17 @@ export const addToCart = itemId => (dispatch, getState) => {
         dispatch({
             type: ADD_TO_CART,
             itemId
+        })
+    }
+};
+
+export const removeFromCart = itemId => (dispatch, getState) => {
+    let quantity = getState().cart.quantityById[itemId];
+    if(quantity > 0) {
+        dispatch({
+            type: REMOVE_FROM_CART,
+            itemId,
+            quantity
         })
     }
 };

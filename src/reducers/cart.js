@@ -1,4 +1,4 @@
-import {ADD_TO_CART} from '../actions'
+import {ADD_TO_CART, REMOVE_FROM_CART} from '../actions'
 
 const initialState = {
     addedIds    : [],
@@ -12,19 +12,29 @@ const addedIds = (state = initialState.addedIds, action) => {
                 return state
             }
             return [...state, action.itemId]
+        case REMOVE_FROM_CART:
+            let itemPosition = state.indexOf(action.itemId);
+            if(itemPosition === -1) {
+                return state
+            }
+            return state.filter((item) => item !== action.itemId)
         default:
             return state
     }
 }
 
 const quantityById = (state = initialState.quantityById, action) => {
+    const {itemId} = action
     switch(action.type) {
         case ADD_TO_CART:
-            const {itemId} = action
             return {
                 ...state,
                 [itemId]: (state[itemId] || 0) + 1
             }
+        case REMOVE_FROM_CART:
+            let res = Object.assign({}, state)
+            delete res[itemId];
+            return res;
         default:
             return state
     }
