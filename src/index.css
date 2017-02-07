@@ -49,3 +49,8 @@ body {
   text-align: center;
   top: 0px;
 }
+
+.item button {
+  width: 100px;
+  text-align: center;
+}

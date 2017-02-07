@@ -1,13 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {getItems} from '../../reducers/items'
-import Item from '../../components/Item/Item'
+import ShopItem from '../../components/ShopItem/ShopItem'
 import ItemList from '../../components/ItemList/ItemList'
 
 const ItemsContainer = ({items}) => (
     <ItemList title="Items">
         {items.map(item =>
-            <Item
+            <ShopItem
                 key={item.id}
                 item={item}
             />
