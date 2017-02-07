@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "category": "Video Games",
+    "price": "30000",
+    "superSale": true,
+    "name": "Nintendo Switch",
+    "inventory": 1
+  },
+  {
+    "id": 2,
+    "category": "Video Games",
+    "price": "8000",
+    "superSale": true,
+    "name": "Zelda : Breath of the Wild",
+    "inventory": 10
+  },
+  {
+    "id": 3,
+    "category": "Video Games",
+    "price": "50000",
+    "superSale": false,
+    "name": "Sony PS4 PRO",
+    "inventory": 14
+  },
+  {
+    "id": 4,
+    "category": "Sake",
+    "price": "4999",
+    "superSale": true,
+    "name": "Nihonshu",
+    "inventory": 20
+  },
+  {
+    "id": 5,
+    "category": "Sake",
+    "price": "1990",
+    "superSale": false,
+    "name": "Umeshu",
+    "inventory": 5
+  },
+  {
+    "id": 6,
+    "category": "Sake",
+    "price": "9999",
+    "superSale": true,
+    "name": "Yamazaki whisky",
+    "inventory": 12
+  }
+]
